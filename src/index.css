@@ -1,3 +1,4 @@
+/* -------- Start Elements Styling -------- */
 #start-menu-outline{
   outline: 5px solid yellow;
   background-color: #1E90FF;
@@ -51,6 +52,20 @@
   transition: all 0.5s ease-out;
 
 }
+
+.displayedPokemonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.displayedPokemon {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+/* -------- Start Button -------- */
 
 .button {
   display: inline-block;
