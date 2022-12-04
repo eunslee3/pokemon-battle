@@ -1,13 +1,17 @@
 import React, {useState} from 'react'
 import './index.css'
-import ChoosePokemon from './components/ChoosePokemon'
+import StartPage from './components/StartPage'
+import BattlePage from './components/BattlePage'
 
 function App() {
-  const [selectPokemon, setSelectPokemon] = useState('')
+  const [selectedPokemon, setSelectedPokemon] = useState('')
+  const [startBtnValue, setStartBtnValue] = useState(false)
+
+  console.log(startBtnValue)
 
   return (
     <div >
-      <ChoosePokemon setSelectPokemon={setSelectPokemon}/>
+      {startBtnValue ? <BattlePage setStartBtnValue={setStartBtnValue} startBtnValue={startBtnValue} /> : <StartPage startBtnValue={startBtnValue} setStartBtnValue={setStartBtnValue} setSelectedPokemon={setSelectedPokemon}/>}
     </div>
   );
 }
